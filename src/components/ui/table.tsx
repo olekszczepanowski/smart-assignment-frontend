@@ -58,7 +58,7 @@ const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={cn(
-      "border-b transition-colors hover:bg-slate-200 data-[state=selected]:bg-muted",
+      "border-b transition-colors hover:bg-blue-200 dark:hover:bg-zinc-900 data-[state=selected]:bg-muted",
       className
     )}
     {...props}
@@ -73,7 +73,7 @@ const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={cn(
-      "h-12 px-4 text-left align-middle font-medium text-muted-foreground border-b-2 border-slate-400 break-words",
+      "h-12 px-4 text-left align-middle font-medium text-muted-foreground border-b-2 border-blue-400 dark:border-slate-200 break-words",
       className
     )}
     {...props}
@@ -88,7 +88,7 @@ const TableCell = React.forwardRef<
   <td
     ref={ref}
     className={cn(
-      "p-4 align-middle [&:has([role=checkbox])]:pr-0 break-words",
+      "p-4 align-middle [&:has([role=checkbox])]:pr-0 break-words dark:text-white",
       className
     )}
     style={{ wordBreak: "break-word", whiteSpace: "normal" }}
