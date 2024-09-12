@@ -42,13 +42,15 @@ export const UsersView = () => {
 
   return (
     <div className="w-full">
-      {users.loading && <div className="text-center">Loading...</div>}
+      {users.loading && (
+        <div className="text-center dark:text-white">Loading...</div>
+      )}
       {!users.loading && users.error ? (
         <Alert
           variant="destructive"
-          className="flex flex-col justify-center items-center mt-2"
+          className="flex flex-col justify-center items-center mt-2 dark:bg-zinc-800"
         >
-          <ExclamationTriangleIcon className="h-4 w-4" />
+          <ExclamationTriangleIcon className="h-4 w-4 dark:text-red-600" />
           <AlertTitle>Error</AlertTitle>
           <AlertDescription>Failed to fetch the data.</AlertDescription>
         </Alert>
@@ -56,7 +58,7 @@ export const UsersView = () => {
       {!users.loading &&
         !users.error &&
         (filteredUsers.length ? (
-          <div className="mt-2 rounded-xl bg-blue-100 dark:bg-zinc-700 border-2 ">
+          <div className="mt-2 rounded-xl bg-blue-100 dark:bg-zinc-800 border-2 ">
             <Table>
               <TableHeader>
                 <TableHead className="w-1/4">Name</TableHead>
@@ -85,7 +87,7 @@ export const UsersView = () => {
             </Table>
           </div>
         ) : (
-          <Alert className="mt-2 bg-blue-100 flex flex-col justify-center items-center">
+          <Alert className="mt-2 bg-blue-100 flex flex-col justify-center items-center dark:bg-zinc-800">
             <AlertTitle>No users found!</AlertTitle>
             <AlertDescription>
               Clear filters or change values in inputs to display data.

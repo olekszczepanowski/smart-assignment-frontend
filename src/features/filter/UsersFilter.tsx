@@ -16,7 +16,7 @@ export const UsersFilter = () => {
 
   return (
     <>
-      <div className="bg-blue-100 dark:bg-zinc-700 rounded-xl border-2 p-4 mt-2 flex flex-col items-center justify-center gap-2">
+      <div className="bg-blue-100 dark:bg-zinc-800 rounded-xl border-2 p-4 mt-2 flex flex-col items-center justify-center gap-2">
         <h1 className="dark:text-white text-lg">Available filters</h1>
         <div className="grid grid-cols-2 md:flex md:justify-center items-center w-full gap-2">
           <Input
