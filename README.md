@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# User managment table 💻⌨️
 
-Currently, two official plugins are available:
+Junior Frontend Developer assignment for Smart business.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project allows users to view a table of users from mock API, filter them by each column, and change the website's theme.
 
-## Expanding the ESLint configuration
+## Created with:
+Vite, Redux Toolkit, React, TypeScript, Tailwind, shadcn/ui, Figma
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+  git clone https://github.com/olekszczepanowski/smart-assignment-frontend.git
+  cd smart-assignment-frontend
+  npm install
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+If you want to run this project on localhost:
+```bash
+  npm run dev
 ```
+## Demo
+Link
+
+Light mode:
+![Demo image](src/assets/lightMode.png)
+Dark mode:
+![Demo image](src/assets/darkMode.png)
+
+## Mockups
+I've created a simple mockups for desktop and mobile devices.
+https://www.figma.com/proto/yohvkBaluSAISjspWv0Wqf/Mockups-smart-assignment?node-id=2-288&t=Ld1qrFPefbv8wVjW-1
+
+## My approach to the assignment
+
+Before I started writing the code, I created simple mockups to make it easier to create the UI.
+It was tricky for me to design the table for small devices. I had a hard time deciding whether to allow horizontal scrolling for the table or to let the text wrap in columns. From a user's perspective, it seems to me that this table would be used more for copying some data, so I decided to display the wrapped text in columns.
+
+Coding was very enjoyable for me. I often use these technologies, so I didn't have any major issues with the implementation. I've read the best practices and style guide for Redux to improve readability and project structure. I also used components from shadcn/ui, which made creating the UI much easier.
