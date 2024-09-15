@@ -21,7 +21,7 @@ If you want to run this project on localhost:
   npm run dev
 ```
 ## Demo
-Link
+[Link](https://olekszczepanowski.github.io/smart-assignment-frontend/)
 
 Light mode:
 ![Demo image](src/assets/lightMode.png)
